@@ -2,8 +2,8 @@
 
 
 ```
-
-LinkedAccountDtl:
+definitions:
+  LinkedAccountDtl:
     type: object
     properties:
       linkedAccntId:
@@ -20,6 +20,15 @@ LinkedAccountDtl:
         format: date-time
       VerifiedMthd:
         type: string
-        
-        
-        ```
+
+  LinkedAccountDtlResponse:
+    type: object
+    properties:
+      LinkedAccntList:
+        type: array
+        items:
+          $ref: '#/definitions/LinkedAccountDtl'
+
+
+
+            ```
